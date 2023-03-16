@@ -6,6 +6,7 @@ import About from './pages/About';
 import Marketplace from './pages/Marketplace';
 import Profile from './pages/Profile';
 import Product from './pages/Product';
+import Notfound from './pages/Notfound';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Route path='/martketplace' element={<Marketplace/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/product/:id' element={<Product/>}/>
+      <Route path='*' element={<Notfound/>}/>
     </Routes>
     </>
   );
