@@ -19,9 +19,9 @@ function App() {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/martketplace">Marketplace</Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/profile">Profile</Link>
         </li>
@@ -33,9 +33,14 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
-      <Route path='/martketplace' element={<Marketplace/>}/>
+      {/* <Route path='/martketplace' element={<Marketplace/>}/> */}
       <Route path='/profile' element={<Profile/>}/>
-      <Route path='/product/:id' element={<Product/>}/>
+      {/* <Route path='/product/:id' element={<Product/>}/> */}
+      <Route path='/product'>
+        <Route index element={<Marketplace/>}/>
+        <Route path=":id" element={<Product/>}/>
+      </Route>
+
       <Route path='*' element={<Notfound/>}/>
     </Routes>
     </>
