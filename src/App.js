@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Route,Routes,Link } from 'react-router-dom'; 
 import Home from './pages/Home';
 import About from './pages/About';
 import Marketplace from './pages/Marketplace';
 import Profile from './pages/Profile';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <li>
           <Link to="/profile">Profile</Link>
         </li>
+        <li>
+          <Link to="/product">Product</Link>
+        </li>
       </ul>
     </nav>
     <Routes>
@@ -30,6 +34,7 @@ function App() {
       <Route path='/about' element={<About/>} />
       <Route path='/martketplace' element={<Marketplace/>}/>
       <Route path='/profile' element={<Profile/>}/>
+      <Route path='/product/:id' element={<Product/>}/>
     </Routes>
     </>
   );
