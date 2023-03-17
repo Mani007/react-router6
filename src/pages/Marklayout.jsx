@@ -5,7 +5,7 @@ export default function Marklayout() {
   return (
     <>
     <div>
-    <Outlet/>
+    <Outlet context={{hello:"World!!!"}}/>
         <Link to="/product/01">Product 1 </Link> <br/> 
         <Link to="/product/02">Product 2 </Link> <br/>
         <Link to="/product/03">Product 3 </Link> <br/>

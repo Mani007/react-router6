@@ -37,7 +37,7 @@ function App() {
       {/* <Route path='/martketplace' element={<Marketplace/>}/> */}
       <Route path='/profile' element={<Profile/>}/>
       {/* <Route path='/product/:id' element={<Product/>}/> */}
-      <Route path='/product' element={<Marklayout/>}>
+      <Route path='/product' element={<Marklayout/>}>  
         <Route index element={<Marketplace/>}/>
         
         <Route path=":id" element={<Product/>}/>
