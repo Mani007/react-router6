@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Product from './pages/Product';
 import Notfound from './pages/Notfound';
 import Marklayout from './pages/Marklayout';
+import Markroutes from './pages/Markroutes';
 
 function App() {
   return (
@@ -37,10 +38,8 @@ function App() {
       {/* <Route path='/martketplace' element={<Marketplace/>}/> */}
       <Route path='/profile' element={<Profile/>}/>
       {/* <Route path='/product/:id' element={<Product/>}/> */}
-      <Route path='/product' element={<Marklayout/>}>  
-        <Route index element={<Marketplace/>}/>
+      <Route path='/product/*' element={<Markroutes/>}>  
         
-        <Route path=":id" element={<Product/>}/>
       </Route>
 
       <Route path='*' element={<Notfound/>}/>
