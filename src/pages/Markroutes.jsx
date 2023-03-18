@@ -9,9 +9,11 @@ export default function Markroutes() {
     <>
     
         <Routes>
-        <Route index element={<Marketplace/>}/>
-        
-        <Route path=":id" element={<Product/>}/>
+            <Route index element={<Marketplace/>}/>
+            <Route element={<Marklayout/>}>
+                
+                <Route path=":id" element={<Product/>}/>
+            </Route>
         </Routes>
         <Marklayout/>
     </>
