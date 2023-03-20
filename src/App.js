@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Route,Routes,Link, useRoutes } from 'react-router-dom'; 
+import { Route,Routes,Link, useRoutes, NavLink } from 'react-router-dom'; 
 import Home from './pages/Home';
 import About from './pages/About';
 import Marketplace from './pages/Marketplace';
@@ -35,10 +35,10 @@ function App() {
     <nav>
       <ul>
         <li>
-          <Link to="/" state={{hello:"World"}}>Home</Link>
+          <NavLink to="/" >Home</NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
         {/* <li>
           <Link to="/martketplace">Marketplace</Link>
