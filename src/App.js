@@ -35,7 +35,7 @@ function App() {
     <nav>
       <ul>
         <li>
-          <Link to="/" reloadDocument>Home</Link>
+          <Link to="/" state={{hello:"World"}}>Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
