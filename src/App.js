@@ -35,7 +35,7 @@ function App() {
     <nav>
       <ul>
         <li>
-          <NavLink to="/" >Home</NavLink>
+          <NavLink style={({isActive}) => {return isActive ? {color: "blue"} : {}}} to="/" >Home</NavLink>
         </li>
         <li>
           <NavLink to="/about">About</NavLink>
