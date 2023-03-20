@@ -35,7 +35,7 @@ function App() {
     <nav>
       <ul>
         <li>
-          <Link to="/" replace>Home</Link>
+          <Link to="/" reloadDocument>Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
