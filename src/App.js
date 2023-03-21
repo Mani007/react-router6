@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Route,Routes,Link, useRoutes, NavLink } from 'react-router-dom'; 
+import { Route,Routes,Link, useRoutes, NavLink, useLocation } from 'react-router-dom'; 
 import Home from './pages/Home';
 import About from './pages/About';
 import Marketplace from './pages/Marketplace';
@@ -30,6 +30,7 @@ function App() {
       element: <Notfound/>,
     },
   ])
+  const location = useLocation()
   return (
     <>
     <nav>
@@ -39,13 +40,13 @@ function App() {
           {({isActive}) => {return isActive ? "Active Home":"Home"}}</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" state="Hi about state">About</NavLink>
         </li>
         {/* <li>
           <Link to="/martketplace">Marketplace</Link>
         </li> */}
         <li>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile" state="Hi Profile state">Profile</Link>
         </li>
         <li>
           <Link to="/product">Product</Link>
@@ -53,6 +54,7 @@ function App() {
       </ul>
     </nav>
     {elements}
+    {location.state}
     <Routes>
       {/* <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} /> */}
