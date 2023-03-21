@@ -15,7 +15,7 @@ export default function Marklayout() {
         <Link to="/product/04">Product 4 </Link> <br/>
         <Link to="/product/05">Product 5 </Link> <br/>
         <Link to={`/product/${number}`}>Product {number} </Link> <br/>
-        <input type="number" value={number} onChange={e => setSearchParams(e.target.value)} />
+        <input type="number" value={number} onChange={e => setSearchParams({n : e.target.value})} />
           </div>
     </>
   )
