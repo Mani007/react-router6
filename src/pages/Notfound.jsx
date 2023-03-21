@@ -6,6 +6,7 @@ export default function Notfound() {
   useEffect(() => {
     setTimeout(() => {
       navigate("/")
+      //navigate("-1") for the previos page
     }, 1000)
   }, [])
   
